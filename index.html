@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Harlem Children's Zone | Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    
+        <!-- Include Leaflet -->
+        <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+        <link href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" rel="stylesheet">
+    
+        <!-- Include CARTO.js -->
+        <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+
+        <link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+        <link href="./styles.css" rel="stylesheet">
+
+        <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    
+        <!-- Load leaflet.snogylop -->
+        <script src="https://cdn.jsdelivr.net/gh/ebrelsford/Leaflet.snogylop@v0.4.0/src/leaflet.snogylop.js"></script>
+      
+  </head>
+  <body>
+    
+    <!-- this is the sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="closebtn" onclick="closeNav();">&times;</a>
+ 
+      
+      <div class="box" style="overflow: auto;">
+        <header>
+          <h1 style="text-transform: uppercase;">Harlem Children's Zone</h1>
+        </header>
+        <br>
+        <div class="wrap-collabsible">
+                  <input id="collapsible" class="toggle" type="checkbox">
+                  <label for="collapsible" class="lbl-toggle" tabindex="0">Filter Schools</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                  
+                  <div class="filterBox">
+                    <div><b>Select School Type</b></div>
+                      <label><input type="checkbox" value="Family and Community" class="fam"/> Family and Community</label> <br>
+                      <input type="checkbox" value="Early Childhood" class="child"> Early Childhood <br>
+                      <input type="checkbox" value="Elementary School" class="elemen"> Elementary School <br>
+                      <input type="checkbox" value="Middle School" class="middle"> Middle School <br>
+                      <input type="checkbox" value="High School" class="high"> High School <br>
+                      <input type="checkbox" value="College" class="college"> College <br>
+                  </div>
+                    
+                  <div class="filterBoxRight">
+                    <div><b>Select Program Type</b></div>
+                      <input type="checkbox" value="After School" class="a"> After School <br>
+                      <input type="checkbox" value="Charter School/After School" class="b"> Charter School / After School <br>
+                      <input type="checkbox" value="College and Career" class="c"> College and Career<br>
+                      <input type="checkbox" value="Community" class="d"> Community <br>
+                      <input type="checkbox" value="Early Head Start" class="e"> Early Head Start<br>
+                      <input type="checkbox" value="Parenting" class="f"> Parenting <br>
+                      <input type="checkbox" value="Pre - School" class="g"> Pre-School <br>
+                      <input type="checkbox" value="Social Services" class="h"> Social Services <br>
+                  </div>
+                 
+               <br style="display:block; margin-top:10px; line-height:22px;"> 
+
+            </div>
+        </div>
+        </div>
+        
+        <!-- and here is the drop menu -->
+          <div id="wrapper-select-drop">
+            <select id="js-select-drop">
+              <option selected value="">Select a School</option>
+            </select>
+          </div>
+        
+<!--        THIS IS THE NEW DROP MENU -->
+
+        
+<!--          <div>
+            <select class="filterDrop">
+              <option value="all">Show all School Types</option>      
+              <option value="Family and Community">Family and Community</option>
+              <option value="Early Childhood">Early Childhood</option>       
+              <option value="Elementary School">Elementary School</option> 
+              <option value="Middle School">Middle School</option>
+              <option value="High School">High School</option>
+              <option value="College">College</option>
+            </select>
+          </div> -->
+        
+        <section class="infoBox">
+          <!-- <p class="description open-sans">This is where the information about each school will populate.</p>  -->
+       
+         
+          <div class="sidebar-feature-content"></div>
+         
+    
+          
+        </section>
+        <footer class="js-footer"></footer>
+      </div>
+    </div>
+
+<!-- Use any element to open the sidenav -->
+   <div id="openBoundingBox" class="openbox">
+      <span id="openbtn" class="open" href="#" onclick="openNav();">&#9776;</span>
+    </div>
+   
+    
+<!-- this is of course my map element -->
+    <div id="map"></div>
+    
+<!-- this is the enter button -->
+    <div class="enter-screen"></div>
+       <div class="enter-text">Harlem Children's Zone</div>
+      
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+    <script src="./script.js"></script>
+    
+    <!-- import the Mustache library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+  </body>
+</html>
